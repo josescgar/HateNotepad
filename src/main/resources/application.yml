@@ -1,0 +1,23 @@
+spring:
+  profiles.active: development
+  security:
+    basic:
+      enabled: false
+hatenote:
+  notesPerPage: 5
+---
+spring:
+  profiles: development
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: hatedb
+---
+spring:
+  profiles: production
+  data:
+    mongodb:
+      host: XXX.XXX.XXX.XXX
+      port: 27017
+      database: hatedb

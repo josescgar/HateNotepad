@@ -1,6 +1,6 @@
-package repository;
+package com.escobeitor.hatenotepad.repository;
 
-import model.HatefulPerson;
+import com.escobeitor.hatenotepad.model.HatefulPerson;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,7 +10,6 @@ import java.io.Serializable;
  * Hateful people database repository
  * Created by escobeitor on 27/05/15.
  */
-@Repository
 public interface HatefulPersonRepository extends MongoRepository<HatefulPerson, Serializable> {
 
     /**

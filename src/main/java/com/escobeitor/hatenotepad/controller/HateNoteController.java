@@ -1,21 +1,21 @@
-package controller;
+package com.escobeitor.hatenotepad.controller;
 
-import main.HatenoteConfiguration;
-import main.NoteListDto;
-import model.HateNote;
+import com.escobeitor.hatenotepad.main.HatenoteConfiguration;
+import com.escobeitor.hatenotepad.main.NoteListDto;
+import com.escobeitor.hatenotepad.model.HateNote;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
-import repository.HateNoteRepository;
-import repository.HatefulPersonRepository;
+import com.escobeitor.hatenotepad.repository.HateNoteRepository;
+import com.escobeitor.hatenotepad.repository.HatefulPersonRepository;
 
 /**
  * Controller for actions related to hate notes
  * Created by escobeitor on 27/05/15.
  */
 @RestController
-@RequestMapping("/note")
+@RequestMapping(value = "/note")
 public class HateNoteController {
 
     @Autowired

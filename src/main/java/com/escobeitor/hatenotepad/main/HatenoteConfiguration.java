@@ -1,4 +1,4 @@
-package main;
+package com.escobeitor.hatenotepad.main;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

@@ -1,24 +1,24 @@
-package controller;
+package com.escobeitor.hatenotepad.controller;
 
-import enums.EAssholeLevel;
-import model.HatefulPerson;
+import com.escobeitor.hatenotepad.enums.EAssholeLevel;
+import com.escobeitor.hatenotepad.model.HatefulPerson;
+import com.escobeitor.hatenotepad.repository.HatefulPersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import repository.HatefulPersonRepository;
 
 /**
  * Actions related to Hateful people
  * Created by escobeitor on 27/05/15.
  */
 @RestController
-@RequestMapping("/person")
+@RequestMapping(value = "/person")
 public class HatefulPersonController {
 
     @Autowired
     HatefulPersonRepository hatefulPersonRepository;
 
-    @RequestMapping(value = "/{email}", method = RequestMethod.GET)
-    public @ResponseBody HatefulPerson byEmail(@PathVariable(value = "email") String email) {
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    public @ResponseBody HatefulPerson byEmail(@RequestParam(value = "email", required = true) String email) {
         return hatefulPersonRepository.findByEmail(email);
     }
 

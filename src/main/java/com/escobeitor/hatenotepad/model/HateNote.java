@@ -1,4 +1,4 @@
-package model;
+package com.escobeitor.hatenotepad.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.data.annotation.Id;

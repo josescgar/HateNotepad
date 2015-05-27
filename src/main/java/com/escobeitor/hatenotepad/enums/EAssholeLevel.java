@@ -1,4 +1,4 @@
-package enums;
+package com.escobeitor.hatenotepad.enums;
 
 /**
  * Represents the level of assholeness of a hateful person

@@ -1,4 +1,4 @@
-package main;
+package com.escobeitor.hatenotepad.main;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -25,18 +25,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-            .antMatchers("/person/insert").hasAuthority("ADMIN")
-                .anyRequest().authenticated()
-            .antMatchers("/person/**")
-                .permitAll()
-            .antMatchers("/note/**/delete").hasAuthority("ADMIN")
-                .anyRequest().authenticated()
-            .antMatchers("/note/**")
-                .permitAll()
-            .antMatchers("/audit/**").hasAuthority("AUDITOR")
-            .antMatchers("/**").hasAuthority("USER")
+            .antMatchers("/person/insert").hasRole("ADMIN")
+            .antMatchers("/audit/**").hasRole("AUDITOR")
+            .antMatchers("/note/**/delete").hasRole("ADMIN")
+            .antMatchers("/**").hasRole("USER")
                 .anyRequest().authenticated();
 
+        http.httpBasic();
         http.csrf().disable();
 
     }

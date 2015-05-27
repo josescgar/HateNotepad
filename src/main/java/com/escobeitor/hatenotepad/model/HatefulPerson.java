@@ -1,6 +1,6 @@
-package model;
+package com.escobeitor.hatenotepad.model;
 
-import enums.EAssholeLevel;
+import com.escobeitor.hatenotepad.enums.EAssholeLevel;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;

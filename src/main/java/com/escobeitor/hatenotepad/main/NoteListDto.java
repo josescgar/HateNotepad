@@ -1,6 +1,6 @@
-package main;
+package com.escobeitor.hatenotepad.main;
 
-import model.HateNote;
+import com.escobeitor.hatenotepad.model.HateNote;
 
 import java.util.List;
 

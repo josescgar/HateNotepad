@@ -5,6 +5,8 @@ spring:
       enabled: false
 hatenote:
   notesPerPage: 5
+management:
+    context-path: /audit
 ---
 spring:
   profiles: development

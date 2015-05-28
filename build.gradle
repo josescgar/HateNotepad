@@ -25,6 +25,7 @@ repositories {
 
 ext {
     springBootVersion = '1.2.3.RELEASE'
+    springSecurityTestVersion = '4.0.1.RELEASE'
 }
 
 dependencies {
@@ -36,4 +37,5 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator:$springBootVersion")
 
     testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+    testCompile("org.springframework.security:spring-security-test:$springSecurityTestVersion")
 }

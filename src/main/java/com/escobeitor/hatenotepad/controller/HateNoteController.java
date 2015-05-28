@@ -48,6 +48,6 @@ public class HateNoteController {
             throw new RuntimeException("No person found with ID " + person);
         }
 
-        hateNoteRepository.deleteByHatefulPerson(person);   
+        hateNoteRepository.deleteByHatefulPerson(person);
     }
 }

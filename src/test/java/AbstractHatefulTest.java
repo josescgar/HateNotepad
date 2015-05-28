@@ -1,9 +1,16 @@
 import org.junit.Before;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.FilterChainProxy;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Initializes common variables to all hateful tests
@@ -30,7 +37,7 @@ public abstract class AbstractHatefulTest {
     protected WebApplicationContext webAppContext;
 
     @Before
-    public void initialize() {
+    public void setUp() {
 
         mockMvc = MockMvcBuilders
                 .webAppContextSetup(webAppContext)
